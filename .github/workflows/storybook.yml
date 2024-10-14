@@ -1,0 +1,47 @@
+
+name: Storybook Visual Regression with Chromatic
+
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - '**' 
+
+jobs:
+  storybook_visual_regression:
+    name: Storybook Visual Regression
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+
+      - name: Install Dependencies
+        run: |
+          cd nuxt-frontend
+          npm install
+
+      - name: Start Nuxt App in Development Mode
+        run: |
+          cd nuxt-frontend
+          npm run dev &
+        # Wait for the Nuxt app to be ready (add a wait to ensure the server is up)
+      - name: Wait for Nuxt App
+        run: sleep 20  # Adjust this time if necessary to give your app time to start
+
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: chpt_82906225e5ee952
+          exitZeroOnChanges: true
+          onlyChanged: true
+          zip: true

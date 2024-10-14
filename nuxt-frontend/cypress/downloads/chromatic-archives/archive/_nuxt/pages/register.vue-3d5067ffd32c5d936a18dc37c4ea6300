@@ -1,0 +1,17 @@
+import { createHotContext as __vite__createHotContext } from "/_nuxt/@vite/client";import.meta.hot = __vite__createHotContext("/pages/register.vue?macro=true");
+const __nuxt_page_meta = null
+export default __nuxt_page_meta
+
+// Vite
+if (import.meta.hot) {
+  import.meta.hot.accept(mod => {
+    Object.assign(__nuxt_page_meta, mod)
+  })
+}
+// webpack
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept((err) => {
+    if (err) { window.location = window.location.href }
+  })
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBS0U7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInJlZ2lzdGVyLnZ1ZSJdLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XG4gICAgPFJlZ2lzdHJhdGlvblRlbXBsYXRlIC8+XG4gIDwvdGVtcGxhdGU+XG4gIFxuICA8c2NyaXB0IHNldHVwPlxuICBpbXBvcnQgUmVnaXN0cmF0aW9uVGVtcGxhdGUgZnJvbSAnfi9jb21wb25lbnRzL3RlbXBsYXRlcy9SZWdpc3RyYXRpb25UZW1wbGF0ZS52dWUnO1xuICA8L3NjcmlwdD5cbiAgIl0sImZpbGUiOiIvaG9tZS9hbnRlLW5laC9Eb2N1bWVudHMvdnVlL2Zyb250ZW5kLXFhLXNlbGVjdGlvbi9udXh0LWZyb250ZW5kL3BhZ2VzL3JlZ2lzdGVyLnZ1ZSJ9
