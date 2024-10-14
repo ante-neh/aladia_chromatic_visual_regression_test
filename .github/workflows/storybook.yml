@@ -4,7 +4,7 @@ name: Storybook Visual Regression with Chromatic
 on:
   push:
     branches:
-      - main  
+      - '**' 
   pull_request:
     branches:
       - '**' 

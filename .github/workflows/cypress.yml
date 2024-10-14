@@ -3,7 +3,7 @@ name: Cypress E2E with Chromatic Visual Regression
 on:
   push:
     branches:
-      - main 
+      - "**"
   pull_request:
     branches:
       - "**"
